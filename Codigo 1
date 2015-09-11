@@ -1,0 +1,31 @@
+float mac= 3;
+float steve = 8;
+int dan = 5;
+
+void setup(){ 
+  size (600,600);
+}
+
+//modo interactivo
+
+void draw (){
+  mac= mac+(steve*dan);
+  
+  if(mac>100 || mac < 0){
+    dan= dan* -3;
+ } 
+  
+  for(int uno =0; uno < height; uno = uno +10){
+      for (int dos =0; dos < width; dos = dos +10){
+          line (dos,0,dos,width);
+          line (0,uno,height,uno);
+          noStroke();
+          fill(100,80,0,mac);
+          rect(uno,dos,8,8);
+          }
+          
+  }
+
+
+
+}
